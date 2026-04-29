@@ -39,60 +39,13 @@
 
 ## 安装
 
-### 推荐：用 `npx skills add`
-
-安装到当前项目：
+用 `skills` CLI 安装即可：
 
 ```bash
-npx --yes skills add baryon/goal-first-data-ui -y
+npx skills add baryon/goal-first-data-ui
 ```
 
-安装为全局 skill：
-
-```bash
-npx --yes skills add baryon/goal-first-data-ui -g -y
-```
-
-指定安装到某个 agent：
-
-```bash
-npx --yes skills add baryon/goal-first-data-ui --agent claude-code -y
-```
-
-如果你想用完整 GitHub URL，也可以：
-
-```bash
-npx --yes skills add https://github.com/baryon/goal-first-data-ui -y
-```
-
-或使用 SSH：
-
-```bash
-npx --yes skills add git@github.com:baryon/goal-first-data-ui.git -y
-```
-
-### 手动安装到 Claude Code
-
-```bash
-mkdir -p ~/.claude/skills
-git clone git@github.com:baryon/goal-first-data-ui.git ~/.claude/skills/goal-first-data-ui
-```
-
-### 手动安装到 Codex
-
-```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-git clone git@github.com:baryon/goal-first-data-ui.git "${CODEX_HOME:-$HOME/.codex}/skills/goal-first-data-ui"
-```
-
-### 手动安装到项目目录
-
-如果你的 agent 会读取项目内的 skills，可以把仓库克隆到项目的 skills 目录，例如：
-
-```bash
-mkdir -p .claude/skills
-git clone git@github.com:baryon/goal-first-data-ui.git .claude/skills/goal-first-data-ui
-```
+`skills add` 是问答式的，会继续询问安装范围、目标 agent、是否确认等选项；按提示选择即可。
 
 ## 使用方式
 
